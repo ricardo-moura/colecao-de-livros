@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  frontend:
+    command: ["npm", "run", "dev"]
+    environment:
+      - NODE_ENV=development
