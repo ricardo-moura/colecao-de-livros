@@ -79,6 +79,23 @@ colecao-de-livros/
 ### Pré-requisitos
 - Docker e Docker Compose instalados
 - Make (opcional, mas recomendado)
+- Node.js 18+ (para desenvolvimento local)
+
+### Configuração de Variáveis de Ambiente
+
+1. **Copie os arquivos de exemplo:**
+   ```bash
+   # Na raiz do projeto
+   cp .env.example .env
+   
+   # Backend
+   cp backend/.env.example backend/.env
+   
+   # Frontend
+   cp frontend/.env.example frontend/.env
+   ```
+
+2. **Edite conforme necessário** (os valores padrão funcionam para desenvolvimento local)
 
 ### Opção 1: Com Make (Recomendado)
 
@@ -86,6 +103,9 @@ colecao-de-livros/
 # Clonar o repositório
 git clone [URL_DO_REPOSITORIO]
 cd colecao-de-livros
+
+# Configurar variáveis de ambiente
+make setup-env  # Novo comando para configurar .env
 
 # Ver comandos disponíveis
 make help
