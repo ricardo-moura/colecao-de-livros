@@ -1,4 +1,4 @@
-.PHONY: help up down restart logs logs-frontend logs-backend clean build rebuild dev up-dev down-dev status
+.PHONY: help up down restart logs logs-frontend logs-backend clean build rebuild dev up-dev down-dev status setup-env
 
 # Cores para output
 RED := \033[0;31m
@@ -90,3 +90,10 @@ restart-frontend: ## Reinicia apenas o frontend
 
 restart-backend: ## Reinicia apenas o backend
 	docker-compose restart backend
+
+setup-env: ## Configura arquivos .env copiando dos exemplos
+	@echo "$(GREEN)Configurando arquivos .env...$(NC)"
+	@if [ ! -f .env ]; then cp .env.example .env; echo "  ✓ .env criado"; else echo "  ✓ .env já existe"; fi
+	@if [ ! -f backend/.env ]; then cp backend/.env.example backend/.env; echo "  ✓ backend/.env criado"; else echo "  ✓ backend/.env já existe"; fi
+	@if [ ! -f frontend/.env ]; then cp frontend/.env.example frontend/.env; echo "  ✓ frontend/.env criado"; else echo "  ✓ frontend/.env já existe"; fi
+	@echo "$(GREEN)Configuração de ambiente concluída!$(NC)"
