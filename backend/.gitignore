@@ -1,0 +1,85 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm/
+
+# Optional REPL history
+.node_repl_history
+
+# dotenv environment variables file
+.env
+.env.test
+
+# TypeScript build files
+dist/
+
+# NestJS specific
+.eslintcache
+
+# IDEs and other tools
+.idea/
+.vscode/
+.DS_Store
+*.tsbuildinfo
+
+# Coverage directory
+coverage/
+
+# macOS
+.DS_Store
+
+# npm package lock
+package-lock.json
+
+# yarn lock
+yarn.lock
+
+# pnpm lock
+pnpm-lock.yaml
+
+# editorconfig
+.editorconfig
+
+# misc
+*.tgz
+.nyc_output/
+.temp/
+.tmp/
+.cache/
+.next/
+.nuxt/
+.output/
+.parcel-cache/
+.rollup.cache/
+.svelte-kit/
+.vite/
+.vuepress/
+.yarn/
+
+# Docker
+.dockerignore
+Dockerfile.prod
+Dockerfile.dev
+
+# Test
+*.spec.ts
+*.e2e-spec.ts
+
+# Compiled output
+*.js
+*.d.ts
+
+# Other
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
